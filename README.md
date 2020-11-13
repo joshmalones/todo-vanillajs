@@ -1,3 +1,0 @@
-# todo-vanillajs
-
-adding readme 
