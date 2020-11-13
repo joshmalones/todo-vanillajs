@@ -15,13 +15,13 @@ header {
   font-size: 1.5rem;
 }
 header,
-form {
+form,
+.todoList {
   min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 form input,
 form button {
   padding: 0.75rem;
@@ -33,7 +33,7 @@ form button {
 
 form button {
   color: #d88771;
-  background: black;
+  background: white;
   padding-left: 15px;
   padding-right: 15px;
   cursor: pointer;
@@ -43,4 +43,82 @@ form button {
 form button:hover {
   background: #d88771;
   color: white;
+}
+
+.todoList__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todoList {
+  min-width: 30%;
+  list-style: none;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.todo {
+  margin: 0.5rem;
+  background: white;
+  padding: 0.5rem 1rem;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo li {
+  flex: 1;
+}
+
+.completed__btn,
+.delete__btn {
+  background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  outline-style: none;
+  font-size: 1rem;
+}
+.completed__btn {
+  background: rgb(73, 204, 73);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.3rem;
+  margin-right: 40px;
+}
+.selection {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.selection::after {
+  content: "\25BC";
+  position: absolute;
+  background: #ff6f47;
+  top: 0;
+  right: 0;
+  padding: 1.3rem;
+  pointer-events: none;
 }
